@@ -4,6 +4,7 @@ import { client } from "../../lib/sanity.client";
 import PreviewSuspense from '../../components/PreviewSuspense';
 import PreviewBlogList from "../../components/PreviewBlogList";
 import BlogList from "../../components/BlogList";
+import SideList from "../../components/SideList";
 
 const query = groq`
   *[_type=='post'] {
@@ -33,8 +34,13 @@ export default async function HomePage() {
   const posts = await client.fetch(query);
   
   return (
-    <div>
-      <BlogList posts={posts} />
+    <div className="grid xl:grid-cols-5">
+      <div className="xl:col-span-4">
+        <BlogList posts={posts} />
+      </div>
+      <div className="hidden xl:block xl:col-span-1">
+        <SideList posts={posts} />
+      </div>
     </div>
   )
 }

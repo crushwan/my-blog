@@ -1,7 +1,6 @@
 import { PortableText } from "@portabletext/react";
 import { groq } from 'next-sanity';
 import Image from "next/image";
-import { SlugInput } from "sanity";
 import { RichTextComponents } from "../../../../components/RichTextComponents";
 import { client } from "../../../../lib/sanity.client";
 import urlFor from "../../../../lib/urlFor";

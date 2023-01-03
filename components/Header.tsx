@@ -7,7 +7,7 @@ function Header() {
       <div className="flex items-center space-x-2">
         <Link href="/">
           <Image
-            src="/vercel.svg"
+            src="/favicon.ico"
             alt="Logo"
             width={50}
             height={50}
